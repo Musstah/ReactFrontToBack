@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "concurrently": "^8.2.2",
     "cra-template": "1.2.0",
     "framer-motion": "^11.0.3",
+    "json-server": "^1.0.0-alpha.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
@@ -18,7 +20,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "reportWebVitals": "node src/reportWebVitals.js"
+    "reportWebVitals": "node src/reportWebVitals.js",
+    "server": "json-server --watch db.json --port 5000",
+    "dev": "concurrently \"npm run server\" \"npm start\""
   },
   "eslintConfig": {
     "extends": [
