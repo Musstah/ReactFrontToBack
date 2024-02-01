@@ -13,6 +13,7 @@ function ForgotPassword() {
     e.preventDefault();
     try {
       const auth = getAuth();
+      console.log(auth);
       await sendPasswordResetEmail(auth, email);
       toast.success("Email was sent");
     } catch (error) {
